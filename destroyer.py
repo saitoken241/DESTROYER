@@ -3,7 +3,14 @@ import time
 import sys 
 from concurrent.futures import ThreadPoolExecutor
 import argparse
+import pyfiglet
 
+ascii_banner = pyfiglet.figlet_format("DESTROYER")
+print("="*60)
+print(ascii_banner)
+print("="*60)
+print("Developed by ken\n")
+time.sleep(1.5)
 parser = argparse.ArgumentParser(description="Web fuzzer like ffuf")
 parser.add_argument("-u", help="Target URL with DESTROY keyword")
 parser.add_argument("-w", help="Wordlist file")
