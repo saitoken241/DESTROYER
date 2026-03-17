@@ -7,7 +7,8 @@ A fast, multithreaded web fuzzer inspired by [ffuf](https://github.com/ffuf/ffuf
 ## Requirements
 
 ```bash
-pip install requests
+pip3 install requests
+pip3 install pyfiglet
 ```
 
 ---
