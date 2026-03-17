@@ -5,8 +5,8 @@ from concurrent.futures import ThreadPoolExecutor
 import argparse
 
 parser = argparse.ArgumentParser(description="Web fuzzer like ffuf")
-parser.add_argument("host", help="Target URL with DESTROY keyword")
-parser.add_argument("wordlist", help="Wordlist file")
+parser.add_argument("-u", help="Target URL with DESTROY keyword")
+parser.add_argument("-w", help="Wordlist file")
 parser.add_argument("-t", type=int, default=50, help="(50 default) Number of threads")
 parser.add_argument("--only-200", action="store_true", help="Show only 200 responses")
 parser.add_argument("--length", default=None, type=int, help="length of response")
@@ -16,18 +16,18 @@ parser.add_argument("--timeout", type=int, default=5)
 args = parser.parse_args()
 
 
-base = args.host.replace("DESTROY.", "")
+base = args.u.replace("DESTROY.", "")
 timeout = args.timeout
 scheme = "http" if args.http else "https"
 
 
-with open(args.wordlist, "r") as f:
+with open(args.w, "r") as f:
     payloads = [linha.strip() for linha in f if linha.strip()]
     
 
 def destroy(payload):
 
-    host = args.host.replace("DESTROY", payload)
+    host = args.u.replace("DESTROY", payload)
         
        
     try:
