@@ -107,3 +107,12 @@ This tool is intended for **authorized security testing only**. Do not use again
 ## 📄 License
 
 MIT
+
+---
+
+**ken**
+
+Backend Developer | Cybersecurity Enthusiast
+
+📧 []()
+🔗 LinkedIn: 
