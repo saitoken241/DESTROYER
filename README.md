@@ -114,5 +114,3 @@ MIT
 
 Backend Developer | Cybersecurity Enthusiast
 
-📧 []()
-🔗 LinkedIn: 
